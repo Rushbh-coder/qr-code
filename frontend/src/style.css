@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.scanner {
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  width: 250px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  color: green;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
