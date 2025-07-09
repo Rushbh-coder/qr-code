@@ -9,19 +9,20 @@ const Scanner = () => {
     scanner.render(
       async (decodedText) => {
         try {
-          await axios.post("http://localhost:5000/api/attendance", { qrCode: decodedText });
+          const BACKEND_URL = "https://qr-code-p1ne.onrender.com";
+          await axios.post(`${BACKEND_URL}/api/attendance`, { qrCode: decodedText });
+
           alert("✅ Attendance marked: " + decodedText);
-          resetTimeout(() => {
+
+          setTimeout(() => {
             scanner.clear();
           }, 2000); // Clear scanner after 2 seconds
         } catch (err) {
           alert("❌ Already marked or error");
-          
         }
-        scanner.clear();
       },
       (err) => {
-        // console.warn("Scan error", err);
+        // handle scan errors silently
       }
     );
 
